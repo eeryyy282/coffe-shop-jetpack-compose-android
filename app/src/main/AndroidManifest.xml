@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CoffeeShopJetpackCompose"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.learnjetpackcompose.coffeeshopjetpackcompose.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.CoffeeShopJetpackCompose">
             <intent-filter>
