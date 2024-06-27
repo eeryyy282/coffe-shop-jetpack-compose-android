@@ -1,4 +1,4 @@
-package com.learnjetpackcompose.coffeshopjetpackcompose
+package com.learnjetpackcompose.coffeeshopjetpackcompose
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

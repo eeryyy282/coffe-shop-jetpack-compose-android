@@ -1,4 +1,4 @@
-package com.learnjetpackcompose.coffeshopjetpackcompose
+package com.learnjetpackcompose.coffeeshopjetpackcompose
 
 import org.junit.Test
 

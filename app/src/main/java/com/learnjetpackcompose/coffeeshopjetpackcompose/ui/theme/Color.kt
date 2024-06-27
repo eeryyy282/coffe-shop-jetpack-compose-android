@@ -1,4 +1,4 @@
-package com.learnjetpackcompose.coffeshopjetpackcompose.ui.theme
+package com.learnjetpackcompose.coffeeshopjetpackcompose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
