@@ -50,7 +50,7 @@ fun JetpackCoffeeApp() {
         modifier = Modifier.verticalScroll(rememberScrollState())
     ) {
         Banner()
-        SectionText(stringResource(R.string.section_category))
+        SectionText(title = stringResource(R.string.section_category))
         CategoryRow()
         SectionText(title = stringResource(id = R.string.section_favorite_menu))
         MenuRow(listMenu = dummyMenu)
