@@ -16,11 +16,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.learnjetpackcompose.coffeeshopjetpackcompose.model.dummyCategory
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.CategoryItem
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.Search
+import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.SectionText
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.theme.CoffeeShopJetpackComposeTheme
 import com.learnjetpackcompose.coffeshopjetpackcompose.R
 
@@ -40,6 +42,8 @@ class MainActivity : ComponentActivity() {
 fun JetpackCoffeeApp() {
     Column {
         Banner()
+        SectionText(stringResource(R.string.section_category))
+        CategoryRow()
     }
 }
 
@@ -61,9 +65,7 @@ fun Banner(
 }
 
 @Composable
-fun CategoryRow(
-    modifier: Modifier = Modifier
-) {
+fun CategoryRow() {
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
