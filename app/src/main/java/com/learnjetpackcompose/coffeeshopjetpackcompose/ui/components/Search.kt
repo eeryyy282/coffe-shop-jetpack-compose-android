@@ -1,6 +1,5 @@
 package com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components
 
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -38,7 +37,7 @@ fun Search(
             )
         },
         placeholder = {
-            Text(stringResource(R.string.placeholder_search))
+            Text(text = stringResource(R.string.placeholder_search))
         },
         shape = MaterialTheme.shapes.large,
         colors = SearchBarDefaults.colors(
@@ -46,8 +45,7 @@ fun Search(
         ),
         modifier = Modifier
             .padding(16.dp)
-            .fillMaxSize()
-            .heightIn(min = 48.dp),
+            .heightIn(min = 48.dp)
     ) {
 
     }
