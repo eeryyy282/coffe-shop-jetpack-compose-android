@@ -11,7 +11,8 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun SectionText(
-    title: String
+    title: String,
+    modifier: Modifier = Modifier
 ) {
     Text(
         text = title,

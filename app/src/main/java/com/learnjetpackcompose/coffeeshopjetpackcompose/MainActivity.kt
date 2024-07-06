@@ -26,9 +26,9 @@ import com.learnjetpackcompose.coffeeshopjetpackcompose.model.dummyBestSellerMen
 import com.learnjetpackcompose.coffeeshopjetpackcompose.model.dummyCategory
 import com.learnjetpackcompose.coffeeshopjetpackcompose.model.dummyMenu
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.CategoryItem
+import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.HomeSection
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.MenuItem
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.Search
-import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.components.SectionText
 import com.learnjetpackcompose.coffeeshopjetpackcompose.ui.theme.CoffeeShopJetpackComposeTheme
 import com.learnjetpackcompose.coffeshopjetpackcompose.R
 
@@ -47,15 +47,25 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun JetpackCoffeeApp() {
     Column(
-        modifier = Modifier.verticalScroll(rememberScrollState())
+        modifier = Modifier
+            .verticalScroll(rememberScrollState())
     ) {
         Banner()
-        SectionText(title = stringResource(R.string.section_category))
-        CategoryRow()
-        SectionText(title = stringResource(id = R.string.section_favorite_menu))
-        MenuRow(listMenu = dummyMenu)
-        SectionText(title = stringResource(id = R.string.section_best_seller_menu))
-        MenuRow(listMenu = dummyBestSellerMenu)
+        HomeSection(
+            title = stringResource(id = R.string.section_category),
+            content = { CategoryRow() })
+
+        HomeSection(title = stringResource(id = R.string.menu_favorite), content = {
+            MenuRow(
+                listMenu = dummyMenu
+            )
+        })
+
+        HomeSection(title = stringResource(id = R.string.section_best_seller_menu), content = {
+            MenuRow(
+                listMenu = dummyBestSellerMenu
+            )
+        })
     }
 }
 
