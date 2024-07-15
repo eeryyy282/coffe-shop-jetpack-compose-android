@@ -13,19 +13,26 @@ import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
     primary = LightCoffeeBrown,
-    secondary = LightCoffeeBrown
+    secondary = LightCoffeeBrown,
+    secondaryContainer = LightCoffeeBrown,
+    onSecondaryContainer = CoffeeBrown,
+    onSurface = LightCoffeeBrown,
+    onSurfaceVariant = LightCoffeeBrown
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = CoffeeBrown,
     secondary = CoffeeBrown,
+    secondaryContainer = LightCoffeeBrown,
+    onSecondaryContainer = CoffeeBrown,
+    onSurface = CoffeeBrown,
+    onSurfaceVariant = LightGray,
     background = Color.White
 )
 
 @Composable
 fun CoffeeShopJetpackComposeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
